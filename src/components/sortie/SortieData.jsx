@@ -6,7 +6,7 @@ export default function SortieData(props) {
         <AnimatePresence>
             {props.see &&
                 <motion.div
-                className="overflow-y-scroll max-h-screen"
+                className="overflow-auto max-h-screen"
                 initial={{ opacity: 0, x:+100 }}
                 animate={{ opacity: 1, x:0 }}
                 exit={{ opacity: 0, x: +100  }}

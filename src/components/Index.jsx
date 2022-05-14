@@ -7,6 +7,7 @@ import Fissures from './Fissures/Fissures';
 import Sortie from './sortie/Sortie'
 import FlashSale from './flashSales/FlashSales'
 import Invasions from './invasions/Invasions'
+import EarthDay from './EarthDay/EarthDay'
 
 export default function Index() {
     const [data, changeData] = useState([]);
@@ -27,6 +28,7 @@ export default function Index() {
         </div>
         <div className="flex flex-col">
             <Events data={data.events} />
+            <EarthDay data={data.earthCycle} />
         </div>
         <div className="flex flex-col">
             <Alert data={data.alerts} />
