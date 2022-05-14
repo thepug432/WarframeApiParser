@@ -9,7 +9,7 @@ export default function Invasions(props) {
         const [seeDropDown, changeSeeDropDown] = useState(true)
         return(
             <Holder>
-                <Head head={'Sales'} collapseFunc={changeSeeDropDown} collapse={seeDropDown}/>
+                <Head head={'Invasions'} collapseFunc={changeSeeDropDown} collapse={seeDropDown}/>
 
                 <div className="bg-gray-700 max-h-screen">
                     <InvasionsData Invasions={props.data} see={seeDropDown}/>

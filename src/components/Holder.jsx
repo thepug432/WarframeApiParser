@@ -5,7 +5,7 @@ export default function Holder({children}) {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="basis-1/4 text-white rounded-md max-h-screen mb-9">
+            className=" text-white rounded-md max-h-screen mb-9">
                 {children}
         </motion.div>
     )
