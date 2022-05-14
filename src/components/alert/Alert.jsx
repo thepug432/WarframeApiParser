@@ -10,7 +10,7 @@ export default function Alert(props) {
         return(
             <Holder>
                 <Head head={'Alerts'} collapseFunc={changeSeeDropDown} collapse={seeDropDown}/>
-                <div className="bg-gray-700 max-h-screen" id="newsholder">
+                <div className="bg-gray-700 max-h-screen">
                     <AlertData alert={props.data} see={seeDropDown}/>
                 </div>
 

@@ -10,7 +10,7 @@ export default function News(props) {
             <Holder>
                 <Head head={'news'} collapseFunc={changeSeeNews} collapse={seeNews}/>
                 
-                <div className="bg-gray-700 max-h-screen" id="newsholder">
+                <div className="bg-gray-700 max-h-screen">
                 <NewsData newsData={props.data} see={seeNews}/>
                 </div>
 

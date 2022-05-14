@@ -11,7 +11,7 @@ export default function Events(props) {
             <Holder>
                 <Head head={'Events'} collapseFunc={changeSeeDropDown} collapse={seeDropDown}/>
 
-                <div className="bg-gray-700 max-h-screen" id="newsholder">
+                <div className="bg-gray-700 max-h-screen">
                     <EventsData events={props.data} see={seeDropDown}/>
                 </div>
 

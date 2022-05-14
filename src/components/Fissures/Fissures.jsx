@@ -11,7 +11,7 @@ export default function Fissures(props) {
             <Holder>
                 <Head head={'Fissures'} collapseFunc={changeSeeDropDown} collapse={seeDropDown}/>
 
-                <div className="bg-gray-700 max-h-screen" id="newsholder">
+                <div className="bg-gray-700 max-h-screen">
                     <FissuresData fissures={props.data} see={seeDropDown}/>
                 </div>
 

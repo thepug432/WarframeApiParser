@@ -11,7 +11,7 @@ export default function Sortie(props) {
             <Holder>
                 <Head head={'Sortie'} collapseFunc={changeSeeDropDown} collapse={seeDropDown}/>
 
-                <div className="bg-gray-700 max-h-screen" id="newsholder">
+                <div className="bg-gray-700 max-h-screen">
                     <SortieData sorites={props.data} see={seeDropDown}/>
                 </div>
 
