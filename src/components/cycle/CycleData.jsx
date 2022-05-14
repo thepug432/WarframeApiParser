@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function EarthDayData(props) {
+export default function CetusCycleData(props) {
     return(
         <AnimatePresence>
             {props.see &&
@@ -12,9 +12,9 @@ export default function EarthDayData(props) {
                 >
                 {props.time
                     ?
-                        <p className="mx-3">It is {props.time.state}, with {props.time.timeLeft} left</p>
+                        <p className="mx-3">It is {props.time.state}{props.time.active}, with {props.time.timeLeft} left</p>
                     :
-                    <h1>No Earth Time avalible</h1>
+                    <h1>No Cetus Time avalible</h1>
                 }
                     </motion.div>
                 }
