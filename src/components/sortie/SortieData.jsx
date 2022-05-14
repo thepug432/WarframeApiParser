@@ -15,11 +15,10 @@ export default function SortieData(props) {
                     ?
                         
                         <div 
-                        key={props.sorites.id} 
                         className="mx-3 flex flex-col">
                             <h2><strong>{props.sorites.faction} sortie</strong></h2>
                             {props.sorites.variants.map((variants) =>
-                                <div className="flex flex-col">
+                                <div className="flex flex-col" key={variants.node} >
                                     <h3>{variants.missionType} | ({variants.node.replace(' (', ', ').replace(')', '')})</h3>
                                     <p title={variants.modifierDescription}>{variants.modifier}</p>
                                     <hr className="bg-slate-500 w-9/12 self-center my-3"></hr>

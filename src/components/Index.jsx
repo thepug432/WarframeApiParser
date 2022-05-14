@@ -9,6 +9,7 @@ import FlashSale from './flashSales/FlashSales'
 import Invasions from './invasions/Invasions'
 import Cycle from './cycle/Cycle'
 import NightWave from './NightWave/NightWave'
+import Arb from './arb'
 
 
 export default function Index() {
@@ -35,6 +36,8 @@ export default function Index() {
             <Cycle data={data.cetusCycle} title={'Cetus Cycle'}/>
             <Cycle data={data.vallisCycle} title={'Vallis Cycle'}/>
             <Cycle data={data.cambionCycle} title={'Cambion Cycle'}/>
+
+            <Arb data={data.arbitration} />
         </div>
 
         <div className="flex flex-col">
