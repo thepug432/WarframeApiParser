@@ -10,7 +10,9 @@ export default function NewsData(props) {
                 animate={{ opacity: 1, x:0 }}
                 exit={{ opacity: 0, x: +100  }}
                 >
-                    {props.newsData.map((data) => {
+                {props.newsData 
+                    ?
+                    props.newsData.map((data) => {
                             const d = new Date(data.date);
                             return(
                                     <div 
@@ -28,7 +30,11 @@ export default function NewsData(props) {
                                 
                                 )
                             }) 
-                        }
+                        
+                    :
+                        <h2>No News</h2>
+                }
+                    
                     </motion.div>
                 }
             </AnimatePresence>

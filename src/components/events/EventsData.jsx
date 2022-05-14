@@ -10,7 +10,9 @@ export default function EventsData(props) {
                 animate={{ opacity: 1, x:0 }}
                 exit={{ opacity: 0, x: +100  }}
                 >
-                    {props.events.map((data) => {
+                {props.events
+                    ?
+                    props.events.map((data) => {
                             const d = new Date(data.expiry);
                             return(
                                     <div 
@@ -25,7 +27,9 @@ export default function EventsData(props) {
                                 
                                 )
                             }) 
-                        }
+                    :
+                    <h1>No events</h1>
+                }
                     </motion.div>
                 }
             </AnimatePresence>

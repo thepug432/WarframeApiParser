@@ -10,8 +10,9 @@ export default function AlertData(props) {
                 animate={{ opacity: 1, x:0 }}
                 exit={{ opacity: 0, x: +100  }}
                 >
-                    {props.alert.map((data) => {
-                            
+                {props.alert
+                ?
+                    props.alert.map((data) => {
                             const d = new Date(data.expiry);
                             return(
                                     <div 
@@ -24,10 +25,11 @@ export default function AlertData(props) {
                                         <p className="text-sm">Expires ({d.toUTCString()})</p>
                                         <hr className="bg-slate-500 w-5/6 self-center my-3"></hr> 
                                     </div>
-                                
-                                )
-                            }) 
-                        }
+
+                                )}
+                            )
+                :  <h1>No alerts</h1>
+                }
                 </motion.div>
             }
         </AnimatePresence>
