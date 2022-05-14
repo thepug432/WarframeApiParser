@@ -14,7 +14,7 @@ export default function News(props) {
                             <p>Posted {data.eta}, on the {d.toUTCString()}</p>
                         </div>
                     )
-                })
+                }) 
             }
             </div>
         )
