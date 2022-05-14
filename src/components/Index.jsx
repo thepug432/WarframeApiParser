@@ -9,7 +9,7 @@ import FlashSale from './flashSales/FlashSales'
 import Invasions from './invasions/Invasions'
 import Cycle from './cycle/Cycle'
 import NightWave from './NightWave/NightWave'
-import Arb from './arb'
+import Arb from '../arb/arb'
 
 
 export default function Index() {
