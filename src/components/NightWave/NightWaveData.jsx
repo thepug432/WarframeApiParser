@@ -14,9 +14,11 @@ export default function NightWaveData(props) {
                     ?
                         <div 
                         className="mx-3 flex flex-col">
+                        <p><strong>Challanges end {new Date(props.data.expiry).toDateString()}</strong></p>
+                        <hr className="bg-slate-500 w-5/6 self-center my-3"></hr>
                             {props.data.activeChallenges.map((data) => {
                                 return(
-                                    <div key={data.id}>
+                                    <div key={data.id} className="flex flex-col">
                                     <h2><strong>{data.title}</strong></h2>
                                     <p>{data.desc}</p>
                                     <p className="text-sm">Reputation: {data.reputation}</p>
@@ -24,7 +26,6 @@ export default function NightWaveData(props) {
                                     </div>
                                 )
                             })}
-                           
                         </div> 
                     :
                         <h2>No Nightwave Data avalible</h2>
