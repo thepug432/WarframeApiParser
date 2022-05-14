@@ -8,6 +8,8 @@ import Sortie from './sortie/Sortie'
 import FlashSale from './flashSales/FlashSales'
 import Invasions from './invasions/Invasions'
 import Cycle from './cycle/Cycle'
+import NightWave from './NightWave/NightWave'
+
 
 export default function Index() {
     const [data, changeData] = useState([]);
@@ -24,20 +26,24 @@ export default function Index() {
         <div className="grid md:grid-cols-5 sm:grid-cols-2 gap-1">
         <div className="flex flex-col">
             <News data={data.news} />
-            <Invasions data={data.invasions} />
         </div>
+
         <div className="flex flex-col">
             <Events data={data.events} />
+
             <Cycle data={data.earthCycle} title={'Earth Cycle'}/>
             <Cycle data={data.cetusCycle} title={'Cetus Cycle'}/>
             <Cycle data={data.vallisCycle} title={'Vallis Cycle'}/>
             <Cycle data={data.cambionCycle} title={'Cambion Cycle'}/>
         </div>
+
         <div className="flex flex-col">
             <Alert data={data.alerts} />
+            <NightWave data={data.nightwave} />
         </div>
         <div className="flex flex-col">
             <Sortie data={data.sortie} />
+            <Invasions data={data.invasions} />
         </div>
         <div className="flex flex-col">
             <Fissures data={data.fissures} />
