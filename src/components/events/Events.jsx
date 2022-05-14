@@ -9,7 +9,7 @@ export default function Events(props) {
         const [seeDropDown, changeSeeDropDown] = useState(true)
         return(
             <Holder>
-                <Head head={'events'} collapseFunc={changeSeeDropDown} collapse={seeDropDown}/>
+                <Head head={'Events'} collapseFunc={changeSeeDropDown} collapse={seeDropDown}/>
 
                 <div className="bg-gray-700 max-h-screen" id="newsholder">
                     <EventsData events={props.data} see={seeDropDown}/>

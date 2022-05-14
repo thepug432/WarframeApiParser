@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Head from '../Head'
 import Holder from '../Holder'
-import NewsData from '../NewsData'
+import NewsData from './NewsData'
 
 export default function News(props) {
     if (props.data) {
