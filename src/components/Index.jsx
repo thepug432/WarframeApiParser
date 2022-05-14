@@ -3,7 +3,8 @@ import {GetPlatform} from '../hooks/PlatformContext';
 import News from "./news/News";
 import Events from './events/Events';
 import Alert from './alert/Alert';
-import Sortie from './sortie/Sortie';
+import Fissures from './Fissures/Fissures';
+import Sortie from './sortie/Sortie'
 
 export default function Index() {
     const [data, changeData] = useState([]);
@@ -22,6 +23,7 @@ export default function Index() {
             <Events data={data.events} />
             <Alert data={data.alerts} />
             <Sortie data={data.sortie} />
+            <Fissures data={data.fissures} />
         </div>
     );
 };

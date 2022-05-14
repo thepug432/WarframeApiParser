@@ -25,7 +25,7 @@ export default function SortieData(props) {
                                     <hr className="bg-slate-500 w-9/12 self-center my-3"></hr>
                                 </div>
                             )}
-                            <p>Expires {d.toUTCString()} ({props.sorites.eta})</p>
+                            <p className="text-sm">Expires {d.toUTCString()} ({props.sorites.eta})</p>
                         </div>
 
                     :
@@ -34,5 +34,5 @@ export default function SortieData(props) {
                     </motion.div>
                 }
             </AnimatePresence>
-        )
-}
+        );
+};
