@@ -18,7 +18,7 @@ export default function EventsData(props) {
                                     <div 
                                     key={data.id} 
                                     className="mx-3 flex flex-col">
-                                        <h2 className="text-lg">{data.description}</h2>
+                                        <h2 className="text-lg"><strong>{data.description}</strong></h2>
                                         <p className="text-sm">{data.tooltip}</p>
                                         <h2 className="text-sm">{data.victimNode} {data.node}</h2>
                                         <h2 className="text-sm">Expires {d.toUTCString()}</h2>
