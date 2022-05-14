@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import {GetPlatform} from '../hooks/PlatformContext';
-import News from "./News";
-import Events from './Events';
-import Alert from './Alert';
+import News from "./news/News";
+import Events from './events/Events';
+import Alert from './alert/Alert';
 
 export default function Index() {
     const [data, changeData] = useState([]);

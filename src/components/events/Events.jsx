@@ -1,25 +1,21 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import Holder from '../Holder'
 import EventsData from './EventsData'
-import Head from './Head'
+import Head from '../Head'
 
 export default function Events(props) {
     
     if(props.data){
         const [seeDropDown, changeSeeDropDown] = useState(true)
         return(
-            <motion.div
-            id="EventsMain"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="basis-1/5 text-white rounded-md max-h-screen">
+            <Holder>
                 <Head head={'events'} collapseFunc={changeSeeDropDown} collapse={seeDropDown}/>
 
                 <div className="bg-gray-700 max-h-screen" id="newsholder">
-                <EventsData events={props.data} see={seeDropDown}/>
+                    <EventsData events={props.data} see={seeDropDown}/>
                 </div>
 
-            </motion.div>
+            </Holder>
         )
     } else{
         <h1>Loading...</h1>
