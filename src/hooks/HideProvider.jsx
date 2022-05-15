@@ -30,7 +30,7 @@ export default function HideProvider({children}){
     return(
         <GetCycle.Provider value={[seeCycle, changeSeeCycle]}>
             <GetEvents.Provider value={[seeEvents, changeSeeEvents]}>
-                <GetNews.Provider value={seeNews}>
+                <GetNews.Provider value={[seeNews, changeSeeNews]}>
                     <GetArb.Provider value={[seeArb, changeSeeArb]}>
                         {children}
                     </GetArb.Provider>

@@ -3,9 +3,9 @@ import { FaPlaystation, FaXbox } from 'react-icons/fa';
 import { SiNintendoswitch } from 'react-icons/si'
 import Platform from './Platform'
 import Hide from './Hide'
-import {UseGetCycle} from '../../hooks/HideProvider'
+import {UseGetCycle , UseNews, UseGetEvents, UseGetArb} from '../../hooks/HideProvider'
 
-export default function Nav(props) {
+export default function Nav() {
     return(
         <nav className="flex bg-slate-800 shadow-2xl text-white align-middle mb-3">
             <Platform arg={'pc'} title={'PC'}><HiOutlineDesktopComputer size={20}/></Platform>
@@ -13,7 +13,10 @@ export default function Nav(props) {
             <Platform arg={'xb1'} title={'Xbox 1'}><FaXbox size={20}/></Platform>
             <Platform arg={'swi'} title={'Nintendo Switch'}><SiNintendoswitch size={20}/></Platform>
 
-            <Hide title={'hide'} li={UseGetCycle()}/>
+            <Hide title={'hide hide'} li={UseGetCycle()}/>
+            <Hide title={'hide news'} li={UseNews()}/>
+            <Hide title={'Hide events'} li={UseGetEvents()}/>
+            <Hide title={'hide arb'} li={UseGetArb()}/>
         </nav>
     );
 
