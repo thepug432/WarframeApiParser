@@ -6,9 +6,9 @@ import {UseNews} from '../../hooks/HideProvider';
 import Hider from '../Hider';
 
 export default function News(props) {
+    const [seeNews, changeSeeNews] = useState(true);
+    const view = UseNews()[0]
     if (props.data) {
-        const [seeNews, changeSeeNews] = useState(true);
-        const view = UseNews()[0]
         return(
             <Hider view={view}>
                 <Holder>

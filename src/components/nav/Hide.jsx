@@ -1,7 +1,7 @@
 
 export default function Hide({title, li}) {
     return(
-        <h1 onClick={() => hide(li)}>{title}</h1>
+        <h1 className="mr-2" onClick={() => hide(li)}>{title}</h1>
     )
 }
 

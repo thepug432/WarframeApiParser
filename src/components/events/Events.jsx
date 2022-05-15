@@ -6,10 +6,9 @@ import {UseGetEvents} from '../../hooks/HideProvider';
 import Hider from '../Hider';
 
 export default function Events(props) {
-    
+    const [seeDropDown, changeSeeDropDown] = useState(true)
+    const view = UseGetEvents()[0]
     if(props.data){
-        const [seeDropDown, changeSeeDropDown] = useState(true)
-        const view = UseGetEvents()[0]
         return(
             <Hider view={view}>
                 <Holder>

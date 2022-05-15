@@ -7,9 +7,10 @@ import {UseGetArb} from '../hooks/HideProvider';
 
 export default function Arb(props) {
     const [seeDropDown, changeSeeDropDown] = useState(true)
+    const view = UseGetArb()[0]
     if (props.data){
         return(
-            <Hider view={UseGetArb()[0]}>
+            <Hider view={view}>
                 <Holder>
                     <Head head={'Arbitration'} collapseFunc={changeSeeDropDown} collapse={seeDropDown}/>
 
