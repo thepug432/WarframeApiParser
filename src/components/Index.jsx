@@ -10,10 +10,11 @@ import Invasions from './invasions/Invasions'
 import Cycle from './cycle/Cycle'
 import NightWave from './NightWave/NightWave'
 import Arb from './arb'
-import Nav from './nav'
+import Nav from './nav/nav'
 
 export default function Index() {
     const [data, changeData] = useState([]);
+    const [seeCycle, changeSeeCycle] = useState(true)
     const platform = GetPlatform();
     console.log(platform);
     useEffect(() => {
@@ -25,7 +26,7 @@ export default function Index() {
 
     return(
         <>
-            <Nav />
+            <Nav changeSeeCycle={changeSeeCycle}/>
             <div className="grid md:grid-cols-5 sm:grid-cols-2 gap-1 text-white">
                 <div className="flex flex-col">
                     <News data={data.news} />
@@ -34,10 +35,15 @@ export default function Index() {
                 <div className="flex flex-col">
                     <Events data={data.events} />
 
-                    <Cycle data={data.earthCycle} title={'Earth Cycle'}/>
-                    <Cycle data={data.cetusCycle} title={'Cetus Cycle'}/>
-                    <Cycle data={data.vallisCycle} title={'Vallis Cycle'}/>
-                    <Cycle data={data.cambionCycle} title={'Cambion Cycle'}/>
+                    {seeCycle &&
+                        <>
+                            <Cycle data={data.earthCycle} title={'Earth Cycle'}/>
+                            <Cycle data={data.cetusCycle} title={'Cetus Cycle'}/>
+                            <Cycle data={data.vallisCycle} title={'Vallis Cycle'}/>
+                            <Cycle data={data.cambionCycle} title={'Cambion Cycle'}/>
+                        </>
+                    }
+                    
 
                     <Arb data={data.arbitration} />
                 </div>
