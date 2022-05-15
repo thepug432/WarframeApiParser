@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import {GetPlatform} from '../hooks/PlatformContext';
 import HideProvider from '../hooks/HideProvider';
-import {UseGetCycle, UseNews} from '../hooks/HideProvider';
 import News from "./news/News";
 import Events from './events/Events';
 import Alert from './alert/Alert';

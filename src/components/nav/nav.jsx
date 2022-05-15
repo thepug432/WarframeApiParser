@@ -4,6 +4,14 @@ import { SiNintendoswitch } from 'react-icons/si'
 import Platform from './Platform'
 import Hide from './Hide'
 import {UseGetCycle , UseNews, UseGetEvents, UseGetArb, UseAlerts, UseWave, UseSortie, UseInvasions, UseFissures, UseSales} from '../../hooks/HideProvider'
+import { GiCycle, GiStoneBust } from 'react-icons/gi'
+import { BsNewspaper } from 'react-icons/bs'
+import { MdEmojiEvents } from 'react-icons/md'
+import { GoAlert } from 'react-icons/go'
+import { IoRadio } from 'react-icons/io5'
+import { GiShardSword, GiStakesFence } from 'react-icons/gi'
+import { SiCodemagic } from 'react-icons/si'
+import { FaStore } from 'react-icons/fa'
 
 export default function Nav() {
     return(
@@ -13,16 +21,16 @@ export default function Nav() {
             <Platform arg={'xb1'} title={'Xbox 1'}><FaXbox size={20}/></Platform>
             <Platform arg={'swi'} title={'Nintendo Switch'}><SiNintendoswitch size={20}/></Platform>
 
-            <Hide title={'hide cycle'} li={UseGetCycle()}/>
-            <Hide title={'hide news'} li={UseNews()}/>
-            <Hide title={'Hide events'} li={UseGetEvents()}/>
-            <Hide title={'hide arb'} li={UseGetArb()}/>
-            <Hide title={'hide alerts'} li={UseAlerts()}/>
-            <Hide title={'hide Night'} li={UseWave()}/>
-            <Hide title={'hide Sorite'} li={UseSortie()}/>
-            <Hide title={'hide Invasion'} li={UseInvasions()}/>
-            <Hide title={'hide fissure'} li={UseFissures()} />
-            <Hide title={'hide sales'} li={UseSales()} />
+            <Hide title={<GiCycle size={20}/>} li={UseGetCycle()}/>
+            <Hide title={<BsNewspaper size={20}/>} li={UseNews()}/>
+            <Hide title={<MdEmojiEvents size={20}/>} li={UseGetEvents()}/>
+            <Hide title={<GiStoneBust size={20}/>} li={UseGetArb()}/>
+            <Hide title={<GoAlert size={20}/>} li={UseAlerts()}/>
+            <Hide title={<IoRadio size={20}/>} li={UseWave()}/>
+            <Hide title={<GiShardSword size={20}/>} li={UseSortie()}/>
+            <Hide title={<GiStakesFence size={20}/>} li={UseInvasions()}/>
+            <Hide title={<SiCodemagic size={20}/>} li={UseFissures()} />
+            <Hide title={<FaStore size={20}/>} li={UseSales()} />
         </nav>
     );
 
