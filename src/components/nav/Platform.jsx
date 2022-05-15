@@ -4,7 +4,7 @@ import {UpdateGetPlatform} from '../../hooks/PlatformContext'
 export default function Platform({ children, arg, title}){
     const update = UpdateGetPlatform();
     return(
-        <motion.h1 title={title} whileHover={{ scale:1.1, cursor: 'pointer' }} onClick={() => update(arg)} className="m-2">
+        <motion.h1 title={title} whileHover={{ scale:1.1, cursor: 'pointer' }} onClick={() => update(arg)} className="m-2 my-auto">
             {children}
         </motion.h1>
     );

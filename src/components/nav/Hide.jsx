@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 
 export default function Hide({title, li}) {
 
@@ -11,7 +12,7 @@ export default function Hide({title, li}) {
     };
 
     return(
-        <h1 className="mr-2" onClick={(e) => hide(e, li)}>{title}</h1>
+        <motion.td whileHover={{ scale: 1.1 }} className="mx-2 p-3"><h1 onClick={(e) => hide(e, li)}>{title}</h1></motion.td>
     )
 }
 
