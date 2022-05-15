@@ -41,22 +41,22 @@ export default function Nav() {
                         animate={{ opacity: 1, y:0 }}
                         exit={{ opacity: 0, y:-15  }}>
                             <tr>
-                                <Hide title={<GiCycle size={20}/>} li={UseGetCycle()}/>
-                                <Hide title={<BsNewspaper size={20}/>} li={UseNews()}/>
-                                <Hide title={<MdEmojiEvents size={20}/>} li={UseGetEvents()}/>
+                                <Hide head={<GiCycle size={20}/>} li={UseGetCycle()} title={'Hide Cycles'}/>
+                                <Hide head={<BsNewspaper size={20}/>} li={UseNews()} title={'Hide News'}/>
+                                <Hide head={<MdEmojiEvents size={20}/>} li={UseGetEvents()} title={'Hide Events'}/>
                             </tr>
                             <tr>
-                                <Hide title={<GiStoneBust size={20}/>} li={UseGetArb()}/>
-                                <Hide title={<GoAlert size={20}/>} li={UseAlerts()}/>
-                                <Hide title={<IoRadio size={20}/>} li={UseWave()}/>
+                                <Hide head={<GiStoneBust size={20}/>} li={UseGetArb()} title={'Hide Arbitration'}/>
+                                <Hide head={<GoAlert size={20}/>} li={UseAlerts()} title={'Hide Alerts'}/>
+                                <Hide head={<IoRadio size={20}/>} li={UseWave()} title={'Hide Nightwave'}/>
                             </tr>
                             <tr>
-                                <Hide title={<GiShardSword size={20}/>} li={UseSortie()}/>
-                                <Hide title={<GiStakesFence size={20}/>} li={UseInvasions()}/>
-                                <Hide title={<SiCodemagic size={20}/>} li={UseFissures()} />
+                                <Hide head={<GiShardSword size={20}/>} li={UseSortie()} title={'Hide Sorties'}/>
+                                <Hide head={<GiStakesFence size={20}/>} li={UseInvasions()} title={'Hide Invasions'}/>
+                                <Hide head={<SiCodemagic size={20}/>} li={UseFissures()} title={'Hide Fissures'}/>
                             </tr>
                             <tr>
-                                <Hide title={<FaStore size={20}/>} li={UseSales()} />
+                                <Hide head={<FaStore size={20}/>} li={UseSales()} title={'Hide Sales'}/>
                             </tr>
                         </motion.table>
                     }

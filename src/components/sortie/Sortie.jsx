@@ -10,7 +10,6 @@ export default function Sortie(props) {
     const [seeDropDown, changeSeeDropDown] = useState(true)
     const view = UseSortie()[0]
     if(props.data){
-        
         return(
             <Hider view={view}>
                 <Holder>

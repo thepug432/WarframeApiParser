@@ -27,7 +27,7 @@ export default function Arb(props) {
                                 {Object.keys(props.data).length
                                 ?
                                     <div className="mx-3 flex flex-col">
-                                        <h1><strong>{props.data.type} | {props.data.node.replace(')', '')} {props.data.enemy})</strong></h1>
+                                        <h1><strong>{props.data.type}</strong> <br /> {props.data.node.replace(')', '')} {props.data.enemy})</h1>
                                     </div>
                                 :
                                     <h1>No arbitration</h1>
