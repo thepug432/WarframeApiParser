@@ -52,12 +52,13 @@ export default function Index() {
             </div>
             <div className="flex flex-col">
                 <Fissures data={data.fissures} />
+                <FlashSale data={data.flashSales} />
             </div>
                 
                 
                 
                 
-                {/* <FlashSale data={data.flashSales} /> */}
+                {/*  */}
                 
             </div>
         </>
