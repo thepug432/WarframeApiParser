@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import {GetPlatform} from '../hooks/PlatformContext';
+import { motion } from "framer-motion";
 import HideProvider from '../hooks/HideProvider';
 import News from "./news/News";
 import Events from './events/Events';
@@ -14,7 +16,7 @@ import Arb from './arb';
 import Nav from './nav/nav';
 
 export default function Index() {
-    const [data, changeData] = useState([]);
+    const [data, changeData] = useState(0);
     const platform = GetPlatform();
 
     useEffect(() => {
@@ -22,43 +24,52 @@ export default function Index() {
         .then(response => response.json())
         .then(response => changeData(response))
     }, [platform]);
-    
 
-    return(
-        <HideProvider>
-            
-            <Nav />
-            
-            <div className="grid md:grid-cols-5 sm:grid-cols-2 gap-1 text-white">
-                <div className="flex flex-col">
-                    <News data={data.news} />
-                </div>
+    if(data !== 0){
+        return(
+            <HideProvider>
+                
+                <Nav />
+                
+                <div className="grid md:grid-cols-5 sm:grid-cols-2 gap-1 text-white">
+                    <div className="flex flex-col">
+                        <News data={data.news} />
+                    </div>
 
-                <div className="flex flex-col">
-                    <Events data={data.events} />
+                    <div className="flex flex-col">
+                        <Events data={data.events} />
 
-                    <Cycle data={data.earthCycle} title={'Earth Cycle'}/>
-                    <Cycle data={data.cetusCycle} title={'Cetus Cycle'}/>
-                    <Cycle data={data.vallisCycle} title={'Vallis Cycle'}/>
-                    <Cycle data={data.cambionCycle} title={'Cambion Cycle'}/>
-                    
-                    <Arb data={data.arbitration} />
+                        <Cycle data={data.earthCycle} title={'Earth Cycle'}/>
+                        <Cycle data={data.cetusCycle} title={'Cetus Cycle'}/>
+                        <Cycle data={data.vallisCycle} title={'Vallis Cycle'}/>
+                        <Cycle data={data.cambionCycle} title={'Cambion Cycle'}/>
+                        
+                        <Arb data={data.arbitration} />
 
-                </div>
+                    </div>
 
-                <div className="flex flex-col">
-                    <Alert data={data.alerts} />
-                    <NightWave data={data.nightwave} />
+                    <div className="flex flex-col">
+                        <Alert data={data.alerts} />
+                        <NightWave data={data.nightwave} />
+                    </div>
+                    <div className="flex flex-col">
+                        <Sortie data={data.sortie} />
+                        <Invasions data={data.invasions} />
+                    </div>
+                    <div className="flex flex-col">
+                        <Fissures data={data.fissures} />
+                        <FlashSale data={data.flashSales} />
+                    </div>
                 </div>
-                <div className="flex flex-col">
-                    <Sortie data={data.sortie} />
-                    <Invasions data={data.invasions} />
-                </div>
-                <div className="flex flex-col">
-                    <Fissures data={data.fissures} />
-                    <FlashSale data={data.flashSales} />
-                </div>
+            </HideProvider>
+        );
+    } else{
+        return(
+            <div className="flex flex-col text-white absolute w-screen h-screen bg-slate-900">
+                <motion.div className="m-auto" animate={{ rotate: 360 }} transition={{ duration: 1.5, repeat: Infinity }}>
+                    <AiOutlineLoading3Quarters size={70} />
+                </motion.div>
             </div>
-        </HideProvider>
-    );
+        )
+    }
 };
