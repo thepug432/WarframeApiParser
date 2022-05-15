@@ -5,9 +5,14 @@ const GetEvents = createContext();
 const GetNews = createContext();
 const GetArb = createContext();
 const GetAlerts = createContext();
+const GetWave = createContext();
 
 export const UseGetCycle = () => {
     return useContext(GetCycle);
+};
+
+export const UseWave = () => {
+    return useContext(GetWave)
 };
 
 export const UseGetEvents = () => {
@@ -32,6 +37,7 @@ export default function HideProvider({children}){
     const [seeNews, changeSeeNews] = useState(true);
     const [seeArb, changeSeeArb] = useState(true);
     const [seeAlerts, changeSeeAlerts] = useState(true);
+    const [getWave, changeGetWave] = useState(true);
 
     return(
         <GetCycle.Provider value={[seeCycle, changeSeeCycle]}>
@@ -39,7 +45,9 @@ export default function HideProvider({children}){
             <GetNews.Provider value={[seeNews, changeSeeNews]}>
                 <GetArb.Provider value={[seeArb, changeSeeArb]}>
                     <GetAlerts.Provider value={[seeAlerts, changeSeeAlerts]}>
-                        {children}
+                        <GetWave.Provider value={[getWave, changeGetWave]}>
+                            {children}
+                        </GetWave.Provider>
                     </GetAlerts.Provider>
                 </GetArb.Provider>
              </GetNews.Provider>

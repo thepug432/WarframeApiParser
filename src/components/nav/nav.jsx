@@ -3,7 +3,7 @@ import { FaPlaystation, FaXbox } from 'react-icons/fa';
 import { SiNintendoswitch } from 'react-icons/si'
 import Platform from './Platform'
 import Hide from './Hide'
-import {UseGetCycle , UseNews, UseGetEvents, UseGetArb, UseAlerts} from '../../hooks/HideProvider'
+import {UseGetCycle , UseNews, UseGetEvents, UseGetArb, UseAlerts, UseWave} from '../../hooks/HideProvider'
 
 export default function Nav() {
     return(
@@ -18,6 +18,7 @@ export default function Nav() {
             <Hide title={'Hide events'} li={UseGetEvents()}/>
             <Hide title={'hide arb'} li={UseGetArb()}/>
             <Hide title={'hide alerts'} li={UseAlerts()}/>
+            <Hide title={'hide Night'} li={UseWave()}/>
         </nav>
     );
 
