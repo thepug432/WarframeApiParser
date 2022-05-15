@@ -20,6 +20,7 @@ export default function Index() {
     const platform = GetPlatform();
 
     useEffect(() => {
+        changeData(0)
         fetch(`https://api.warframestat.us/${platform}`)
         .then(response => response.json())
         .then(response => changeData(response))
