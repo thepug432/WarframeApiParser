@@ -8,7 +8,7 @@ export default function News(props) {
         const [seeNews, changeSeeNews] = useState(true);
         return(
             <Holder>
-                <Head head={'news'} collapseFunc={changeSeeNews} collapse={seeNews}/>
+                <Head head={'News'} collapseFunc={changeSeeNews} collapse={seeNews}/>
                 
                 <div className="bg-gray-700 max-h-screen">
                 <NewsData newsData={props.data} see={seeNews}/>
