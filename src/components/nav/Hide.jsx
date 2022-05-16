@@ -15,7 +15,7 @@ export default function Hide({head, li, title}) {
     return(
         <motion.td 
             onHoverStart={() => switchHover(true)}
-            onHoverEnd={() => switchHover(true)}
+            onHoverEnd={() => switchHover(false)}
             whileHover={{ scale: 1.2 }} 
             className="p-3" 
             onClick={(e) => hide(e, li)}
