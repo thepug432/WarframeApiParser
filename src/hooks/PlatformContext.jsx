@@ -11,6 +11,11 @@ export const UpdateGetPlatform = () => {
     return useContext(UpdateGetPlatformContext);
 };
 
+export function savePlatform(val) {
+    localStorage.setItem('platform', val);
+    return;
+}
+
 export default function PlatformProvider({ value, children}){
     const [platform, changePlatform] = useState(value);
     return(

@@ -22,11 +22,19 @@ export default function Index() {
     useEffect(() => {
         changeData(0)
         fetch(`https://api.warframestat.us/${platform}`)
-        .then(response => response.json())
+        .then((response) => {
+            if (response.status !== 200){
+                response = 1
+            } else{
+                response = response.json()
+            }
+            console.log(response);
+            return response
+        })
         .then(response => changeData(response))
     }, [platform]);
 
-    if(data !== 0){
+    if(data !== 0 && data !== 1){
         return(
             <HideProvider>
                 
@@ -64,6 +72,15 @@ export default function Index() {
                 </div>
             </HideProvider>
         );
+    } else if (data === 1){
+        return(
+            <div className="flex flex-col text-white absolute w-screen h-screen bg-slate-900">
+                <motion.div className="mx-auto mt-auto mb-4" animate={{ rotate: 360 }} transition={{ duration: 1.5, repeat: Infinity }}>
+                    <AiOutlineLoading3Quarters size={70} />
+                </motion.div>
+                <h1 className="mx-auto mb-auto">Sorry, something went wrong server-side. <br/> Please reload the page in a few minutes.</h1>
+            </div>
+        )
     } else{
         return(
             <div className="flex flex-col text-white absolute w-screen h-screen bg-slate-900">
