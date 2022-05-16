@@ -15,7 +15,7 @@ export default function Hide({head, li, title}) {
     return(
         <motion.td 
             onHoverStart={() => switchHover(true)}
-            onHoverEnd={() => switchHover(false)}
+            onHoverEnd={() => switchHover(true)}
             whileHover={{ scale: 1.2 }} 
             className="p-3" 
             onClick={(e) => hide(e, li)}
@@ -38,6 +38,9 @@ export default function Hide({head, li, title}) {
                     </>
                 }
             </AnimatePresence>
+            <div className="md:hidden text-sm">
+                {title}
+            </div>
         </motion.td>
     )
 }
