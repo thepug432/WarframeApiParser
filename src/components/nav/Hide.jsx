@@ -26,16 +26,18 @@ export default function Hide({head, li, title}) {
             <h1>{head}</h1>
             <AnimatePresence>
                 {hover &&
-                    <>
-                        <div className="absolute top-8 right-5 border-solid border-slate-900 border-b-8 border-x-transparent border-x-8 border-t-0"></div>
-                        <motion.div 
-                        initial={{ scale: 0 }} 
-                        animate={{ scale: 1 }}
-                        exit={{ scale: 0 }}
-                        className="absolute top-10 right-4 bg-slate-900 text-white p-2 rounded text-sm">
+                    <motion.div
+                    className="absolute top-0 right-0"
+                    initial={{ scale: 0.5, opacity: 0 }} 
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.5, opacity: 0 }}
+                    >
+                        <div 
+                        className="absolute top-8 right-5 border-solid border-slate-900 border-b-8 border-x-transparent border-x-8 border-t-0"></div>
+                        <div className="absolute top-10 right-4 bg-slate-900 text-white p-2 rounded text-sm">
                             <p>{title}</p>
-                        </motion.div>
-                    </>
+                        </div>
+                    </motion.div>
                 }
             </AnimatePresence>
             <div className="md:hidden text-sm">
