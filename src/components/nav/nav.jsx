@@ -40,6 +40,7 @@ export default function Nav() {
                         initial={{ opacity: 0, y:-15 }} 
                         animate={{ opacity: 1, y:0 }}
                         exit={{ opacity: 0, y:-15  }}>
+                        <tbody>
                             <tr>
                                 <Hide head={<GiCycle size={20}/>} li={UseGetCycle()} title={'Hide Cycles'}/>
                                 <Hide head={<BsNewspaper size={20}/>} li={UseNews()} title={'Hide News'}/>
@@ -58,6 +59,7 @@ export default function Nav() {
                             <tr>
                                 <Hide head={<FaStore size={20}/>} li={UseSales()} title={'Hide Sales'}/>
                             </tr>
+                        </tbody>
                         </motion.table>
                     }
                 </AnimatePresence>

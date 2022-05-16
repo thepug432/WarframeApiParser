@@ -12,7 +12,17 @@ export default function Hide({head, li, title}) {
     };
 
     return(
-        <motion.td whileHover={{ scale: 1.2 }} title={title} className="p-3" onClick={(e) => hide(e, li)}><h1>{head}</h1></motion.td>
+        <motion.td 
+            whileHover={{ scale: 1.2 }} 
+            title={title} 
+            className="p-3" 
+            onClick={(e) => hide(e, li)}
+            initial={{ scale: 0 }} 
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            >
+            <h1>{head}</h1>
+        </motion.td>
     )
 }
 
